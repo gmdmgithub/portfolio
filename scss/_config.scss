@@ -2,28 +2,25 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image:true;
 $home_image:url(../img/background.jpg);
-$backgroud-opacity: 0.8;
-
+$backgroud-opacity: 0.9;
 @mixin easeOut {
     transition: all 0.7s ease-out;
 }
 
-@mixin background{
-    @if $show-home-image{
-        &#bg-img{
-            background: $home_image;
-            background-attachment: fixed;
-            background-size: cover;
-            // .overlay{
-            &:after{
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background: rgba($primary-color, $backgroud-opacity);
-            }
+@mixin background {
+    @if $show-home-image {
+        background: $home_image;
+        background-attachment: fixed;
+        background-size: cover; // .overlay{ - possible but bettes is sudo
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba($primary-color, $backgroud-opacity);
         }
     }
 }
