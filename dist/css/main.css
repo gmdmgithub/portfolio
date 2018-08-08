@@ -1,3 +1,14 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.7s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px; }
+
 * {
   box-sizing: border-box; }
 
