@@ -25,6 +25,16 @@ $backgroud-opacity: 0.9;
     }
 }
 
+//set text color - using function to have a callback
+@function set-text-color($color) {
+    @if (lightness($color) >40) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
 //media query mixem
 @mixin mediaSmall {
     @media screen and (max-width: 500px) {
