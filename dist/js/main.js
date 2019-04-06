@@ -10,6 +10,8 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
+document.querySelector("#year").innerHTML = (new Date()).getFullYear();
+
 function toggleMenu() {
 
     if (!showMenu) {
